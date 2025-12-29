@@ -39,10 +39,10 @@ export function FAQ() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            FAQ
+            常見問題
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            hello@zenivy.app
+            有其他問題？寫信到 hello@zenivy.app
           </p>
         </div>
 

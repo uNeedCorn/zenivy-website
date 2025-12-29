@@ -2,22 +2,22 @@ const features = [
   {
     icon: "📇",
     title: "點擊即編輯",
-    description: "Notion 風格的 inline editing，不用切換模式。",
+    description: "像 Notion 一樣直接點擊文字編輯，不用切換模式。",
   },
   {
     icon: "🔒",
-    title: "資料在你電腦",
-    description: "本地 SQLite 儲存，不經過任何伺服器。",
+    title: "資料存在你的電腦",
+    description: "本地資料庫儲存，完全不經過任何伺服器。",
   },
   {
     icon: "🔄",
     title: "Google 同步",
-    description: "雙向同步 Google Contacts，匯入現有資料。",
+    description: "匯入 Google 聯絡人，雙向同步更新。",
   },
   {
     icon: "📊",
-    title: "互動追蹤",
-    description: "記錄每次互動，掌握聯絡頻率。",
+    title: "互動紀錄",
+    description: "記錄每一次互動，一眼看出該聯繫誰了。",
   },
 ];
 
@@ -28,10 +28,10 @@ export function Features() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            功能
+            專注做好一件事
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            簡單的工具，做好一件事。
+            讓你記住每個重要的人。
           </p>
         </div>
 

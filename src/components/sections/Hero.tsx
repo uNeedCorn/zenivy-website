@@ -14,14 +14,13 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 mb-6 max-w-4xl leading-tight">
-            你的人脈，
-            <br className="hidden md:block" />
-            <span className="text-teal-500">一目瞭然</span>
+            讓人脈管理回歸簡單
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-stone-600 mb-8 max-w-2xl">
-            Notion 風格的聯絡人管理。本地儲存，隱私優先。
+          <p className="text-lg md:text-xl text-stone-600 mb-8 max-w-2xl leading-relaxed">
+            給個人業務的聯絡人工具。<br className="hidden sm:block" />
+            Notion 風格的介面，資料存在你的電腦。
           </p>
 
           {/* CTA Buttons */}
