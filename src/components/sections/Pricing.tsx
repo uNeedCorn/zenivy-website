@@ -41,10 +41,10 @@ export function Pricing() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            簡單透明的價格
+            價格
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            從免費版開始，隨時升級獲得更多功能。
+            免費開始，需要時再升級。
           </p>
         </div>
 

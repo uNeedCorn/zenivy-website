@@ -1,23 +1,23 @@
 const features = [
   {
     icon: "📇",
-    title: "Notion 風格介面",
-    description: "熟悉的 inline editing 體驗，點擊即可編輯，無需切換模式。",
+    title: "點擊即編輯",
+    description: "Notion 風格的 inline editing，不用切換模式。",
   },
   {
     icon: "🔒",
-    title: "本地優先隱私",
-    description: "資料儲存在你的電腦，不經過第三方伺服器，完全掌控你的聯絡人資料。",
+    title: "資料在你電腦",
+    description: "本地 SQLite 儲存，不經過任何伺服器。",
   },
   {
     icon: "🔄",
     title: "Google 同步",
-    description: "與 Google Contacts 雙向同步，輕鬆匯入現有聯絡人。",
+    description: "雙向同步 Google Contacts，匯入現有資料。",
   },
   {
     icon: "📊",
-    title: "智慧分析",
-    description: "自動分析互動頻率，提醒你關注重要的人際關係。",
+    title: "互動追蹤",
+    description: "記錄每次互動，掌握聯絡頻率。",
   },
 ];
 
@@ -28,10 +28,10 @@ export function Features() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            為什麼選擇 Zenivy？
+            功能
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            專為個人業務設計的聯絡人管理工具，兼顧效率與隱私。
+            簡單的工具，做好一件事。
           </p>
         </div>
 

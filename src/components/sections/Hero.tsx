@@ -14,16 +14,14 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 mb-6 max-w-4xl leading-tight">
-            用<span className="text-teal-500">禪意</span>培養
+            你的人脈，
             <br className="hidden md:block" />
-            持續生長的人際關係
+            <span className="text-teal-500">一目瞭然</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-stone-600 mb-8 max-w-2xl">
-            Zenivy 是一款給個人業務的 Notion 風格聯絡人管理工具。
-            <br className="hidden md:block" />
-            優雅、隱私、輕量。
+            Notion 風格的聯絡人管理。本地儲存，隱私優先。
           </p>
 
           {/* CTA Buttons */}

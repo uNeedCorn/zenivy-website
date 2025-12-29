@@ -23,10 +23,10 @@ export function Waitlist() {
         <div className="max-w-2xl mx-auto text-center">
           {/* Section Header */}
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            準備好開始了嗎？
+            下載
           </h2>
           <p className="text-lg text-stone-600 mb-8">
-            立即下載免費版，或留下 Email 獲取最新消息與 Pro 版搶先體驗資格。
+            免費使用，無需註冊。
           </p>
 
           {/* Download Button */}
@@ -42,13 +42,12 @@ export function Waitlist() {
             </a>
           </div>
 
-          <div className="text-stone-400 text-sm mb-8">— 或 —</div>
+          <div className="text-stone-400 text-sm mb-8">訂閱更新通知</div>
 
           {/* Email Form */}
           {status === "success" ? (
             <div className="p-6 bg-teal-50 rounded-2xl border border-teal-200">
-              <div className="text-teal-600 font-semibold mb-2">感謝您的訂閱！</div>
-              <p className="text-teal-700 text-sm">我們會在有新消息時通知您。</p>
+              <div className="text-teal-600 font-semibold">已訂閱</div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
@@ -56,7 +55,7 @@ export function Waitlist() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="輸入您的 Email"
+                placeholder="your@email.com"
                 required
                 className="flex-1 px-5 py-3.5 bg-white border border-stone-200 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder:text-stone-400"
               />
@@ -65,13 +64,13 @@ export function Waitlist() {
                 disabled={status === "loading"}
                 className="px-8 py-3.5 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-400 text-white font-semibold rounded-[10px] transition-colors"
               >
-                {status === "loading" ? "送出中..." : "獲取更新"}
+                {status === "loading" ? "..." : "訂閱"}
               </button>
             </form>
           )}
 
           <p className="text-sm text-stone-500 mt-4">
-            我們尊重您的隱私，絕不發送垃圾郵件。
+            不發垃圾信。
           </p>
         </div>
       </div>
