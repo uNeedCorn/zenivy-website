@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
@@ -24,7 +23,7 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#waitlist"
               className="px-8 py-3.5 bg-teal-500 hover:bg-teal-600 text-white font-semibold rounded-[10px] transition-all hover:scale-105 shadow-lg shadow-teal-500/25"
@@ -37,29 +36,6 @@ export function Hero() {
             >
               了解更多
             </Link>
-          </div>
-
-          {/* Hero Image / Screenshot */}
-          <div className="relative w-full max-w-4xl">
-            <div className="aspect-video bg-white rounded-2xl shadow-2xl shadow-stone-900/10 overflow-hidden border border-stone-200">
-              {/* Placeholder for app screenshot */}
-              <div className="w-full h-full bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-teal-100 rounded-2xl flex items-center justify-center">
-                    <Image
-                      src="/brand/logo/logo.svg"
-                      alt="Zenivy"
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <p className="text-stone-400 text-sm">產品截圖區域</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-teal-200/20 via-transparent to-amber-200/20 rounded-full blur-3xl" />
           </div>
         </div>
       </div>
