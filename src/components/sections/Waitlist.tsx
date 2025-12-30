@@ -23,31 +23,17 @@ export function Waitlist() {
         <div className="max-w-2xl mx-auto text-center">
           {/* Section Header */}
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            下載
+            加入候補
           </h2>
           <p className="text-lg text-stone-600 mb-8">
-            免費使用，無需註冊。
+            留下 Email，我們會在內測開放與重要更新時通知你。
           </p>
-
-          {/* Download Button */}
-          <div className="mb-8">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-[10px] transition-all hover:scale-105"
-            >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-              </svg>
-              下載 Mac 版（Apple Silicon）
-            </a>
-          </div>
-
-          <div className="text-stone-400 text-sm mb-8">訂閱更新通知</div>
 
           {/* Email Form */}
           {status === "success" ? (
             <div className="p-6 bg-teal-50 rounded-2xl border border-teal-200">
-              <div className="text-teal-600 font-semibold">已訂閱</div>
+              <div className="text-teal-600 font-semibold">已加入候補</div>
+              <div className="text-teal-700/80 text-sm mt-1">有新進度時會第一時間寄信給你。</div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
@@ -55,7 +41,7 @@ export function Waitlist() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder="name@example.com"
                 required
                 className="flex-1 px-5 py-3.5 bg-white border border-stone-200 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent placeholder:text-stone-400"
               />
@@ -64,13 +50,13 @@ export function Waitlist() {
                 disabled={status === "loading"}
                 className="px-8 py-3.5 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-400 text-white font-semibold rounded-[10px] transition-colors"
               >
-                {status === "loading" ? "..." : "訂閱"}
+                {status === "loading" ? "送出中..." : "加入候補"}
               </button>
             </form>
           )}
 
           <p className="text-sm text-stone-500 mt-4">
-            不發垃圾信。
+            不發垃圾信，隨時可以取消訂閱。
           </p>
         </div>
       </div>

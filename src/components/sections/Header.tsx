@@ -24,13 +24,10 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#features" className="text-stone-600 hover:text-stone-800 transition-colors">
-              功能
+            <Link href="/#features" className="text-stone-600 hover:text-stone-800 transition-colors">
+              核心理念
             </Link>
-            <Link href="#pricing" className="text-stone-600 hover:text-stone-800 transition-colors">
-              方案
-            </Link>
-            <Link href="#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
+            <Link href="/#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
               FAQ
             </Link>
           </nav>
@@ -38,10 +35,10 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="#waitlist"
+              href="/#waitlist"
               className="px-5 py-2.5 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-[10px] transition-colors"
             >
-              立即下載
+              加入候補
             </Link>
           </div>
 
@@ -65,20 +62,17 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-stone-200">
             <nav className="flex flex-col gap-4">
-              <Link href="#features" className="text-stone-600 hover:text-stone-800 transition-colors">
-                功能
+              <Link href="/#features" className="text-stone-600 hover:text-stone-800 transition-colors">
+                核心理念
               </Link>
-              <Link href="#pricing" className="text-stone-600 hover:text-stone-800 transition-colors">
-                方案
-              </Link>
-              <Link href="#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
+              <Link href="/#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
                 FAQ
               </Link>
               <Link
-                href="#waitlist"
+                href="/#waitlist"
                 className="px-5 py-2.5 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-[10px] transition-colors text-center"
               >
-                立即下載
+                加入候補
               </Link>
             </nav>
           </div>

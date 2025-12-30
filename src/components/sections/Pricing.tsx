@@ -4,29 +4,28 @@ const plans = [
   {
     name: "Free",
     price: "免費",
-    description: "適合個人使用",
+    description: "適合個人日常使用",
     features: [
-      "無限聯絡人",
-      "本地資料儲存",
-      "Google Contacts 同步",
-      "基本搜尋與篩選",
-      "匯入/匯出 CSV",
+      "聯絡人無上限",
+      "資料本地儲存",
+      "Google 聯絡人匯入與同步",
+      "搜尋與篩選",
+      "CSV 匯入／匯出",
     ],
-    cta: "免費下載",
+    cta: "申請 Beta",
     featured: false,
   },
   {
     name: "Pro",
     price: "NT$199",
     period: "/月",
-    description: "適合業務專業人士",
+    description: "適合需要跨裝置同步的人",
     features: [
       "Free 所有功能",
-      "多裝置雲端同步",
-      "進階分析報表",
-      "自動備份",
-      "優先客服支援",
-      "即將推出...",
+      "多裝置雲端同步（開發中）",
+      "進階分析（開發中）",
+      "自動備份（開發中）",
+      "優先支援",
     ],
     cta: "即將推出",
     featured: true,
@@ -41,10 +40,10 @@ export function Pricing() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-            價格
+            方案
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            免費開始，需要時再升級。
+            先免費開始；需要多裝置同步時再升級。
           </p>
         </div>
 
@@ -109,7 +108,7 @@ export function Pricing() {
 
               {/* CTA Button */}
               <Link
-                href={plan.disabled ? "#" : "#waitlist"}
+                href={plan.disabled ? "#" : "/#waitlist"}
                 className={`block w-full py-3 text-center font-semibold rounded-[10px] transition-colors ${
                   plan.featured
                     ? "bg-white text-teal-600 hover:bg-teal-50"

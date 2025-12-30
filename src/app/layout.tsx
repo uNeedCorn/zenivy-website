@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zenivy - Personal CRM for Relationship Building",
-  description: "Zenivy 是一款給個人業務的 Notion 風格聯絡人管理工具，優雅、隱私、輕量。培養如常春藤般持續生長的人際關係。",
-  keywords: ["CRM", "Personal CRM", "Contact Management", "Relationship", "Notion-style"],
+  title: "Zenivy｜精簡、專注、本地優先",
+  description: "Zenivy 以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
+  keywords: ["CRM", "Personal CRM", "Contact Management", "Relationship", "Local-first", "Privacy", "macOS"],
   authors: [{ name: "Zenivy" }],
   openGraph: {
-    title: "Zenivy - Personal CRM for Relationship Building",
-    description: "Zenivy 是一款給個人業務的 Notion 風格聯絡人管理工具",
+    title: "Zenivy｜精簡、專注、本地優先",
+    description: "以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
     url: "https://zenivy.app",
     siteName: "Zenivy",
     locale: "zh_TW",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zenivy - Personal CRM",
-    description: "Zenivy 是一款給個人業務的 Notion 風格聯絡人管理工具",
+    title: "Zenivy｜精簡、專注、本地優先",
+    description: "以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
   },
   icons: {
     icon: "/favicon.svg",

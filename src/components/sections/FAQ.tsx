@@ -4,29 +4,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "適合誰？",
+    question: "Zenivy 是什麼？",
     answer:
-      "業務、顧問、創業者、自由工作者。傳統 CRM 太重，通訊錄不夠用的人。",
+      "Zenivy 是精簡、專注、本地優先的關係管理工具：把互動脈絡留住，讓你更有系統地照顧重要的人。",
   },
   {
-    question: "資料存在哪？",
+    question: "什麼時候可以用？",
     answer:
-      "你的電腦。本地 SQLite 資料庫，不經過任何伺服器。",
+      "我們正在收斂核心體驗並準備內測。加入候補後，有內測開放或重要更新會第一時間通知你。",
   },
   {
-    question: "可以匯入 Google Contacts？",
+    question: "資料存在哪裡？",
     answer:
-      "可以。支援雙向同步。",
+      "我們以本地優先為設計原則，目標是讓資料更可控、更安心；若未來提供需要伺服器的功能，會清楚說明並讓你選擇。",
   },
   {
-    question: "支援什麼系統？",
+    question: "會有雲端同步嗎？",
     answer:
-      "macOS（Apple Silicon / Intel）。Windows 開發中。",
+      "未來若推出雲端相關功能，會清楚說明資料如何處理，並提供明確的選擇權讓你決定是否啟用。",
   },
   {
-    question: "免費版有限制嗎？",
+    question: "加入候補後會收到什麼？",
     answer:
-      "沒有聯絡人數量限制。Pro 版增加雲端同步和進階分析。",
+      "當內測開放或有重大更新時，我們會寄信通知你；平常不會打擾。",
+  },
+  {
+    question: "支援哪些平台？",
+    answer:
+      "目前以 macOS 為優先；其他平台會在確認方向後再對外公告。",
   },
 ];
 
@@ -42,7 +47,7 @@ export function FAQ() {
             常見問題
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            有其他問題？寫信到 hello@zenivy.app
+            有其他問題？歡迎寫信到 hello@zenivy.app
           </p>
         </div>
 

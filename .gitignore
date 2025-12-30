@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# local preview / temp
+/.tmp/
+
 # production
 /build
 
