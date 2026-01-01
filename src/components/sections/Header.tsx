@@ -24,11 +24,11 @@ export function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/#features" className="text-stone-600 hover:text-stone-800 transition-colors">
-              核心理念
+            <Link href="/about" className="text-stone-600 hover:text-stone-800 transition-colors">
+              關於
             </Link>
-            <Link href="/#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
-              FAQ
+            <Link href="/manifesto" className="text-stone-600 hover:text-stone-800 transition-colors">
+              理念
             </Link>
           </nav>
 
@@ -62,15 +62,24 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-stone-200">
             <nav className="flex flex-col gap-4">
-              <Link href="/#features" className="text-stone-600 hover:text-stone-800 transition-colors">
-                核心理念
+              <Link
+                href="/about"
+                className="text-stone-600 hover:text-stone-800 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                關於
               </Link>
-              <Link href="/#faq" className="text-stone-600 hover:text-stone-800 transition-colors">
-                FAQ
+              <Link
+                href="/manifesto"
+                className="text-stone-600 hover:text-stone-800 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                理念
               </Link>
               <Link
                 href="/#waitlist"
                 className="px-5 py-2.5 bg-teal-500 hover:bg-teal-600 text-white font-medium rounded-[10px] transition-colors text-center"
+                onClick={() => setIsMenuOpen(false)}
               >
                 加入候補
               </Link>

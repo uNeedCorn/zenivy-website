@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zenivy｜精簡、專注、本地優先",
-  description: "Zenivy 以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
-  keywords: ["CRM", "Personal CRM", "Contact Management", "Relationship", "Local-first", "Privacy", "macOS"],
+  title: "Zenivy｜留白，是為了讓心能靜下來",
+  description: "我們相信，生活需要空間，讓節奏自然浮現。Zenivy 維持留白、減少雜訊，讓清晰與從容得以長久。",
+  keywords: ["Zenivy", "留白", "減少雜訊", "清晰", "從容", "生產力", "專注"],
   authors: [{ name: "Zenivy" }],
   openGraph: {
-    title: "Zenivy｜精簡、專注、本地優先",
-    description: "以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
+    title: "Zenivy｜留白，是為了讓心能靜下來",
+    description: "我們相信，生活需要空間，讓節奏自然浮現。Zenivy 維持留白、減少雜訊，讓清晰與從容得以長久。",
     url: "https://zenivy.app",
     siteName: "Zenivy",
     locale: "zh_TW",
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zenivy｜精簡、專注、本地優先",
-    description: "以精簡、專注、本地優先為設計原則，幫你留住互動脈絡、照顧重要的人。加入候補，第一時間收到內測通知。",
+    title: "Zenivy｜留白，是為了讓心能靜下來",
+    description: "我們相信，生活需要空間，讓節奏自然浮現。Zenivy 維持留白、減少雜訊，讓清晰與從容得以長久。",
   },
   icons: {
     icon: "/favicon.svg",

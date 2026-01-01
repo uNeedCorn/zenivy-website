@@ -1,0 +1,13 @@
+# Zenivy site navigation
+# You can adapt this to your static site generator (e.g., Astro, Next.js, Docusaurus, MkDocs).
+
+navigation:
+  - title: Home
+    path: /home
+    file: Zenivy_Home.md
+  - title: About
+    path: /about
+    file: Zenivy_About.md
+  - title: Manifesto
+    path: /manifesto
+    file: Zenivy_Manifesto.md

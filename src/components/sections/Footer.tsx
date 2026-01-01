@@ -26,11 +26,11 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/#features" className="hover:text-stone-100 transition-colors">
-              核心理念
+            <Link href="/about" className="hover:text-stone-100 transition-colors">
+              關於
             </Link>
-            <Link href="/#faq" className="hover:text-stone-100 transition-colors">
-              FAQ
+            <Link href="/manifesto" className="hover:text-stone-100 transition-colors">
+              理念
             </Link>
             <Link href="/privacy" className="hover:text-stone-100 transition-colors">
               隱私權政策
