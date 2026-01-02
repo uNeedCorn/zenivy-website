@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // Trailing slashes for better static hosting compatibility
-  trailingSlash: true,
+  // Disable trailing slashes for cleaner URLs
+  trailingSlash: false,
 };
 
 export default nextConfig;
