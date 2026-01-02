@@ -92,7 +92,7 @@ export default function PrivacyPage() {
           <h2>聯絡我們</h2>
           <p>
             任何隱私相關問題，請來信{" "}
-            <a href="mailto:ralph@nextora.io">ralph@nextora.io</a>。
+            <a href="mailto:hello@zenivy.app">hello@zenivy.app</a>。
           </p>
 
           <p className="not-prose text-sm text-stone-500">
