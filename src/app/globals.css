@@ -35,14 +35,18 @@
   --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
 
   /* Light Mode */
-  --background: var(--stone-50);
-  --foreground: var(--stone-800);
+  --background: #ffffff;
+  --foreground: var(--stone-900);
+  --muted: var(--stone-600);
+  --border: var(--stone-200);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--stone-900);
     --foreground: var(--stone-100);
+    --muted: var(--stone-400);
+    --border: #44403C;
   }
 }
 
@@ -52,38 +56,30 @@
   --color-teal-500: var(--teal-500);
   --color-teal-600: var(--teal-600);
   --color-amber-500: var(--amber-500);
-  --font-sans: 'Nunito', 'Noto Sans TC', sans-serif;
+  --font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Font Face - Local Fonts */
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito-Regular.woff2') format('woff2');
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito-Medium.woff2') format('woff2');
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito-SemiBold.woff2') format('woff2');
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url('/fonts/Nunito-Bold.woff2') format('woff2');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -104,11 +100,80 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Nunito', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-sans);
 }
 
 /* Selection */
 ::selection {
   background: var(--teal-100);
   color: var(--teal-700);
+}
+
+/* Notion-like typography (scoped) */
+.zen-prose {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.zen-prose :where(h1, h2, h3) {
+  color: var(--foreground);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.zen-prose h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.zen-prose h2 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.zen-prose h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.zen-prose p {
+  margin-top: 1rem;
+}
+
+.zen-prose :where(ul, ol) {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.zen-prose li {
+  margin-top: 0.4rem;
+}
+
+.zen-prose hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.zen-prose strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.zen-prose a {
+  color: var(--teal-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--teal-600), transparent 65%);
+}
+
+.zen-prose a:hover {
+  text-decoration-color: var(--teal-600);
 }

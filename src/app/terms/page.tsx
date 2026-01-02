@@ -1,74 +1,119 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer } from "@/components/sections/Footer";
-import { Header } from "@/components/sections/Header";
+import { Container } from "@/components/site/Container";
+import { Prose } from "@/components/site/Prose";
 
 export const metadata: Metadata = {
-  title: "使用條款｜Zenivy",
-  description: "Zenivy 使用條款與服務說明。",
+  title: "服務條款｜Zenivy",
+  description: "Zenivy 服務條款與使用規範。",
 };
+
+const LAST_UPDATED = "2026-01-02";
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAF9]">
-      <Header />
-      <section className="pt-28 pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
-            使用條款
-          </h1>
+    <main>
+      <Container className="py-16">
+        <Prose>
+          <h1>服務條款</h1>
 
-          <div className="space-y-6 text-stone-700 leading-relaxed">
-            <p>
-              Zenivy 目前可能處於 Beta 階段。我們會努力提供穩定的產品，但仍可能出現功能變動或不預期的錯誤。
-            </p>
+          <p>
+            歡迎使用 Zenivy（由 Nextora 開發）的服務。使用我們的服務即表示你同意以下條款。
+          </p>
 
-            <div>
-              <h2 className="text-xl font-semibold text-stone-900 mb-2">你的責任</h2>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>你同意合法使用 Zenivy，並遵守你所在地的相關法規。</li>
-                <li>請自行妥善備份重要資料；Beta 期間我們不保證資料不會遺失。</li>
-              </ul>
-            </div>
+          <h2>服務說明</h2>
+          <p>
+            Inboxless 是一款 Email 分析與收件匣清理工具，協助你：
+          </p>
+          <ul>
+            <li>分析 Gmail 收件匣，了解信件來源與分布。</li>
+            <li>批次清理不需要的信件，釋放儲存空間。</li>
+            <li>管理訂閱信件，減少收件匣雜訊。</li>
+          </ul>
 
-            <div>
-              <h2 className="text-xl font-semibold text-stone-900 mb-2">免責聲明</h2>
-              <p>
-                Zenivy 以「現況」提供。我們不對任何因使用或無法使用 Zenivy 所造成的間接損失負責。
-              </p>
-            </div>
+          <h2>帳號與授權</h2>
+          <p>使用本服務需要：</p>
+          <ul>
+            <li>擁有有效的 Google 帳號。</li>
+            <li>授權本應用程式存取你的 Gmail（透過 Google OAuth）。</li>
+          </ul>
+          <p>
+            你可以隨時在{" "}
+            <a
+              href="https://myaccount.google.com/permissions"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google 帳號設定
+            </a>{" "}
+            中撤銷授權。
+          </p>
 
-            <div>
-              <h2 className="text-xl font-semibold text-stone-900 mb-2">條款更新</h2>
-              <p>
-                我們可能會更新本條款。重大變更會以網站或 Email 通知（若你有留下聯絡方式）。
-              </p>
-            </div>
+          <h2>你的責任</h2>
+          <ul>
+            <li>你同意合法使用本服務，並遵守所在地的相關法規。</li>
+            <li>你了解並同意授權本應用程式存取你的 Gmail 帳號。</li>
+            <li>你負責保管自己的帳號安全。</li>
+          </ul>
 
-            <div>
-              <h2 className="text-xl font-semibold text-stone-900 mb-2">聯絡我們</h2>
-              <p>
-                有任何問題，請來信{" "}
-                <a className="text-teal-700 hover:underline" href="mailto:hello@zenivy.app">
-                  hello@zenivy.app
-                </a>
-                。
-              </p>
-            </div>
+          <h2>重要警告：不可逆操作</h2>
+          <p>
+            <strong>刪除信件是不可逆的操作。</strong>一旦信件被刪除，將無法復原。請在執行刪除操作前仔細確認。我們建議：
+          </p>
+          <ul>
+            <li>先使用「封存」功能測試。</li>
+            <li>重要信件請先備份。</li>
+            <li>確認選取的信件無誤後再執行刪除。</li>
+          </ul>
 
-            <p className="text-sm text-stone-500">
-              最後更新：{new Date().toISOString().slice(0, 10)}
-            </p>
+          <h2>免責聲明</h2>
+          <p>
+            本服務以「現況」提供。我們盡力確保服務穩定運作，但不保證：
+          </p>
+          <ul>
+            <li>服務不會中斷或完全無錯誤。</li>
+            <li>分析結果百分之百準確。</li>
+          </ul>
+          <p>
+            我們不對因使用或無法使用本服務所造成的任何直接或間接損失負責，包括但不限於資料遺失、業務中斷等。
+          </p>
 
-            <p className="text-sm">
-              <Link className="text-teal-700 hover:underline" href="/">
-                回首頁
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
-      <Footer />
+          <h2>服務限制與終止</h2>
+          <ul>
+            <li>我們保留隨時修改、暫停或終止服務的權利。</li>
+            <li>若你違反本條款，我們可能會限制或終止你的使用權限。</li>
+            <li>你可以隨時停止使用本服務並撤銷授權。</li>
+          </ul>
+
+          <h2>智慧財產權</h2>
+          <p>
+            本服務的所有內容、設計、程式碼均為 Nextora 所有或已獲授權使用，受著作權法保護。
+          </p>
+
+          <h2>條款更新</h2>
+          <p>
+            我們可能會更新本條款。重大變更會在網站公告或透過 Email 通知。繼續使用本服務即表示你同意更新後的條款。
+          </p>
+
+          <h2>適用法律</h2>
+          <p>
+            本條款受中華民國法律管轄。如有爭議，雙方同意以台灣台北地方法院為第一審管轄法院。
+          </p>
+
+          <h2>聯絡我們</h2>
+          <p>
+            有任何問題，請來信{" "}
+            <a href="mailto:ralph@nextora.io">ralph@nextora.io</a>。
+          </p>
+
+          <p className="not-prose text-sm text-stone-500">
+            最後更新：{LAST_UPDATED}
+          </p>
+          <p className="not-prose text-sm">
+            <Link href="/">← 回首頁</Link>
+          </p>
+        </Prose>
+      </Container>
     </main>
   );
 }
