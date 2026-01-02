@@ -17,15 +17,15 @@ export function SiteFooter() {
           >
             理念
           </Link>
-          <Link
+          <a
             className="hover:text-stone-900 transition-colors"
-            href="/privacy"
+            href="/legal/privacy.html"
           >
             隱私權政策
-          </Link>
-          <Link className="hover:text-stone-900 transition-colors" href="/terms">
+          </a>
+          <a className="hover:text-stone-900 transition-colors" href="/legal/terms.html">
             使用條款
-          </Link>
+          </a>
           <a
             className="hover:text-stone-900 transition-colors"
             href="mailto:hello@zenivy.app"
