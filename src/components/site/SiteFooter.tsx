@@ -19,11 +19,11 @@ export function SiteFooter() {
           </Link>
           <a
             className="hover:text-stone-900 transition-colors"
-            href="/legal/privacy.html"
+            href="/legal/privacy.htm"
           >
             隱私權政策
           </a>
-          <a className="hover:text-stone-900 transition-colors" href="/legal/terms.html">
+          <a className="hover:text-stone-900 transition-colors" href="/legal/terms.htm">
             使用條款
           </a>
           <a
