@@ -18,6 +18,7 @@ import {
   ComputerDesktopIcon,
 } from "@/components/site/Icons";
 import Link from "next/link";
+import Image from "next/image";
 
 // 痛點資料
 const painPoints = [
@@ -188,8 +189,22 @@ export default function InboxlessPage() {
           size="wide"
           className="relative flex min-h-[70vh] flex-col items-center justify-center py-24 text-center"
         >
-          {/* Beta 標籤 */}
+          {/* Logo */}
           <FadeIn>
+            <div className="mb-8">
+              <Image
+                src="/brand/inboxless/logo.svg"
+                alt="Inboxless"
+                width={80}
+                height={80}
+                className="mx-auto"
+                priority
+              />
+            </div>
+          </FadeIn>
+
+          {/* Beta 標籤 */}
+          <FadeIn delay={25}>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-medium text-teal-700">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"></span>
@@ -199,13 +214,13 @@ export default function InboxlessPage() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={50}>
+          <FadeIn delay={75}>
             <h1 className="text-5xl font-bold tracking-[-0.04em] text-stone-900 md:text-6xl lg:text-7xl">
               重拾收件匣的掌控權
             </h1>
           </FadeIn>
 
-          <FadeIn delay={100}>
+          <FadeIn delay={125}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-stone-600 md:text-lg">
               Inboxless 分析你的 Gmail，找出佔據空間的訂閱郵件
               <br className="hidden sm:block" />
@@ -214,7 +229,7 @@ export default function InboxlessPage() {
           </FadeIn>
 
           {/* CTA 區塊 */}
-          <FadeIn delay={150}>
+          <FadeIn delay={175}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
               {/* 主要 CTA - macOS */}
               <button className="group inline-flex items-center gap-3 rounded-[10px] bg-stone-900 px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all hover:bg-stone-800 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
@@ -235,7 +250,7 @@ export default function InboxlessPage() {
           </FadeIn>
 
           {/* 向下箭頭 */}
-          <FadeIn delay={200}>
+          <FadeIn delay={225}>
             <div className="mt-12 flex h-8 items-center justify-center">
               <a
                 href="#pain"
