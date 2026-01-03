@@ -172,3 +172,35 @@ npm run build
 - [主產品專案](../Project_Contact/) — Zenivy Desktop App
 - [Brand Guidelines](./public/brand/guidelines.md)
 - [Design Tokens](./doc/design-tokens.md)
+
+## 規範同步 (Sync to Zenivy)
+
+**重要：當發現通用性的新洞察或原則時，應同步更新回 Zenivy 規範庫。**
+
+Zenivy (`~/Developments/zenivy/`) 是所有產品的 **Single Source of Truth (SSOT)**。
+
+### 需要同步回 zenivy 的內容
+
+| 發現來源 | 內容類型 | 更新位置 |
+|----------|----------|----------|
+| 用戶回饋 | Persona 調整、新洞察 | `zenivy/foundation/users/` |
+| 產品決策 | 願景/使命調整 | `zenivy/foundation/vision/` |
+| 開發過程 | 架構決策、新原則 | `zenivy/principles/engineering/` |
+| 設計迭代 | 新 UI pattern、設計規範 | `zenivy/principles/design/` 或 `guidelines/` |
+| 最佳實踐 | 開發流程改進 | `zenivy/guidelines/development/` |
+
+### 不需要同步的內容
+
+- 專案特定的執行細節（時程、分工）
+- 只適用於該專案的特殊處理
+- 暫時性的 workaround
+
+### 同步流程
+
+```
+1. 開發/執行過程中發現新洞察
+2. 先記錄在專案的 doc/ 中
+3. 判斷：這是通用原則？還是專案特例？
+4. 若為通用 → 更新 zenivy/ 對應文件
+5. 在 commit message 註明「sync to zenivy」
+```
