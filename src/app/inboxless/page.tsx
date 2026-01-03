@@ -174,14 +174,12 @@ function FAQItem({
 // 截圖資料
 const screenshots = [
   {
-    src: "/brand/inboxless/screenshots/dashboard.png",
-    alt: "Inboxless 總覽介面 - 信箱健康度分析",
-    caption: "總覽介面",
-  },
-  {
     src: "/brand/inboxless/screenshots/onboarding.png",
     alt: "Inboxless 連接 Gmail 頁面",
-    caption: "快速連接",
+  },
+  {
+    src: "/brand/inboxless/screenshots/dashboard.png",
+    alt: "Inboxless 總覽介面 - 信箱健康度分析",
   },
 ];
 
@@ -239,7 +237,7 @@ function ScreenshotCarousel() {
                 <div className="h-3 w-3 rounded-full bg-[#28C840] transition-opacity group-hover:opacity-80" />
               </div>
               <span className="ml-4 text-sm font-medium text-stone-600">
-                Inboxless — {screenshots[currentIndex].caption}
+                Inboxless
               </span>
             </div>
 
