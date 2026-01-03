@@ -546,6 +546,21 @@ export default function InboxlessPage() {
               <p className="mt-2 text-sm text-stone-400">
                 專注減少數位生活中的雜訊
               </p>
+              <p className="mt-4 flex items-center justify-center gap-3 text-sm text-stone-400">
+                <a
+                  href="/legal/privacy.htm#inboxless"
+                  className="underline underline-offset-2 transition-colors hover:text-stone-600"
+                >
+                  隱私權政策
+                </a>
+                <span>·</span>
+                <a
+                  href="/legal/terms.htm#inboxless"
+                  className="underline underline-offset-2 transition-colors hover:text-stone-600"
+                >
+                  使用條款
+                </a>
+              </p>
             </div>
           </FadeIn>
         </Container>
