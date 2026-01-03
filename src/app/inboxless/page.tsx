@@ -433,7 +433,7 @@ export default function InboxlessPage() {
         </Container>
       </section>
 
-      {/* 截圖區塊 (Placeholder) */}
+      {/* 截圖區塊 */}
       <section className="bg-stone-50">
         <Container size="wide" className="py-16 md:py-24">
           <FadeIn>
@@ -448,23 +448,30 @@ export default function InboxlessPage() {
                 <span className="ml-4 text-sm font-medium text-stone-600">Inboxless</span>
               </div>
               {/* 內容區 */}
-              <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-stone-50 to-stone-100 p-8">
-                {/* 裝飾背景 */}
-                <div className="absolute inset-0 opacity-30">
-                  <div className="absolute left-1/4 top-1/4 h-32 w-32 rounded-full bg-teal-200 blur-3xl" />
-                  <div className="absolute bottom-1/4 right-1/4 h-40 w-40 rounded-full bg-teal-100 blur-3xl" />
-                </div>
-                <div className="relative text-center">
-                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-lg transition-transform duration-300 group-hover:scale-105">
-                    <ComputerDesktopIcon className="h-10 w-10 text-stone-300" />
-                  </div>
-                  <p className="mt-6 text-sm font-medium text-stone-500">
-                    產品截圖即將加入
-                  </p>
-                  <p className="mt-1 text-xs text-stone-400">
-                    敬請期待
-                  </p>
-                </div>
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/brand/inboxless/screenshots/dashboard.png"
+                  alt="Inboxless 總覽介面 - 信箱健康度分析"
+                  width={1920}
+                  height={1200}
+                  className="w-full"
+                  priority
+                />
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* 第二張截圖 - Onboarding */}
+          <FadeIn delay={100}>
+            <div className="group mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-medium transition-all duration-500 hover:shadow-xl">
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/brand/inboxless/screenshots/onboarding.png"
+                  alt="Inboxless 連接 Gmail 頁面"
+                  width={960}
+                  height={600}
+                  className="w-full"
+                />
               </div>
             </div>
           </FadeIn>
