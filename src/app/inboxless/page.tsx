@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Container } from "@/components/site/Container";
 import { FadeIn } from "@/components/site/FadeIn";
 import { InboxlessHeroVisual } from "@/components/site/InboxlessHeroVisual";
@@ -168,6 +168,146 @@ function FAQItem({
         </div>
       </div>
     </div>
+  );
+}
+
+// 截圖資料
+const screenshots = [
+  {
+    src: "/brand/inboxless/screenshots/dashboard.png",
+    alt: "Inboxless 總覽介面 - 信箱健康度分析",
+    caption: "總覽介面",
+  },
+  {
+    src: "/brand/inboxless/screenshots/onboarding.png",
+    alt: "Inboxless 連接 Gmail 頁面",
+    caption: "快速連接",
+  },
+];
+
+// 截圖輪播元件
+function ScreenshotCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % screenshots.length);
+  }, []);
+
+  const goToPrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+  }, []);
+
+  // 自動播放
+  useEffect(() => {
+    const interval = setInterval(goToNext, 5000);
+    return () => clearInterval(interval);
+  }, [goToNext]);
+
+  // 觸控滑動處理
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) goToNext();
+    if (isRightSwipe) goToPrev();
+  };
+
+  return (
+    <section className="bg-stone-50">
+      <Container size="wide" className="py-16 md:py-24">
+        <FadeIn>
+          <div className="group mx-auto max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-medium transition-all duration-500 hover:shadow-xl">
+            {/* macOS 標題列 */}
+            <div className="flex items-center gap-2 border-b border-stone-200 bg-stone-100/80 px-4 py-3">
+              <div className="flex items-center gap-1.5">
+                <div className="h-3 w-3 rounded-full bg-[#FF5F57] transition-opacity group-hover:opacity-80" />
+                <div className="h-3 w-3 rounded-full bg-[#FEBC2E] transition-opacity group-hover:opacity-80" />
+                <div className="h-3 w-3 rounded-full bg-[#28C840] transition-opacity group-hover:opacity-80" />
+              </div>
+              <span className="ml-4 text-sm font-medium text-stone-600">
+                Inboxless — {screenshots[currentIndex].caption}
+              </span>
+            </div>
+
+            {/* 輪播內容 */}
+            <div
+              className="relative overflow-hidden"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {screenshots.map((screenshot, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <Image
+                      src={screenshot.src}
+                      alt={screenshot.alt}
+                      width={1920}
+                      height={1200}
+                      className="w-full"
+                      priority={index === 0}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* 左右箭頭 */}
+              <button
+                onClick={goToPrev}
+                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-stone-600 opacity-0 shadow-md backdrop-blur transition-all hover:bg-white hover:text-stone-900 group-hover:opacity-100"
+                aria-label="上一張"
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={goToNext}
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 text-stone-600 opacity-0 shadow-md backdrop-blur transition-all hover:bg-white hover:text-stone-900 group-hover:opacity-100"
+                aria-label="下一張"
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* 指示器 */}
+            <div className="flex items-center justify-center gap-2 border-t border-stone-100 bg-stone-50/50 py-3">
+              {screenshots.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentIndex
+                      ? "w-6 bg-teal-500"
+                      : "w-2 bg-stone-300 hover:bg-stone-400"
+                  }`}
+                  aria-label={`切換到第 ${index + 1} 張截圖`}
+                />
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+      </Container>
+    </section>
   );
 }
 
@@ -434,49 +574,7 @@ export default function InboxlessPage() {
       </section>
 
       {/* 截圖區塊 */}
-      <section className="bg-stone-50">
-        <Container size="wide" className="py-16 md:py-24">
-          <FadeIn>
-            <div className="group mx-auto max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-medium transition-all duration-500 hover:shadow-xl">
-              {/* macOS 標題列 */}
-              <div className="flex items-center gap-2 border-b border-stone-200 bg-stone-100/80 px-4 py-3">
-                <div className="flex items-center gap-1.5">
-                  <div className="h-3 w-3 rounded-full bg-[#FF5F57] transition-opacity group-hover:opacity-80" />
-                  <div className="h-3 w-3 rounded-full bg-[#FEBC2E] transition-opacity group-hover:opacity-80" />
-                  <div className="h-3 w-3 rounded-full bg-[#28C840] transition-opacity group-hover:opacity-80" />
-                </div>
-                <span className="ml-4 text-sm font-medium text-stone-600">Inboxless</span>
-              </div>
-              {/* 內容區 */}
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/brand/inboxless/screenshots/dashboard.png"
-                  alt="Inboxless 總覽介面 - 信箱健康度分析"
-                  width={1920}
-                  height={1200}
-                  className="w-full"
-                  priority
-                />
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* 第二張截圖 - Onboarding */}
-          <FadeIn delay={100}>
-            <div className="group mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-medium transition-all duration-500 hover:shadow-xl">
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/brand/inboxless/screenshots/onboarding.png"
-                  alt="Inboxless 連接 Gmail 頁面"
-                  width={960}
-                  height={600}
-                  className="w-full"
-                />
-              </div>
-            </div>
-          </FadeIn>
-        </Container>
-      </section>
+      <ScreenshotCarousel />
 
       {/* 下載區塊 */}
       <section className="bg-white">
