@@ -35,17 +35,27 @@
   <p>Inboxless is an email analysis and inbox cleanup tool that helps you organize and manage your Gmail messages.</p>
 
   <h2>Data We Collect</h2>
-  <p>When you use our service, we may collect the following data:</p>
+  <p>When you use our service, we collect the following data through Google APIs:</p>
+
+  <h3>From Google OAuth</h3>
   <ul>
-    <li><strong>Google Account Information</strong>: Your email address, name, and profile picture (for identification purposes).</li>
-    <li><strong>Gmail Message Metadata</strong>: Sender, subject, and date information (for analysis purposes).</li>
+    <li><strong>Email Address</strong>: To identify your account.</li>
+    <li><strong>Display Name</strong>: To personalize your experience.</li>
+    <li><strong>Profile Picture</strong>: To display in the application interface.</li>
   </ul>
 
-  <h3>Important Notes</h3>
+  <h3>From Gmail API</h3>
   <ul>
-    <li>We do <strong>NOT</strong> store your email content on our servers.</li>
-    <li>All data analysis is performed locally on your device (client-side).</li>
-    <li>Local data is cleared when you close the application.</li>
+    <li><strong>Email Headers</strong>: Sender address, subject line, and timestamp.</li>
+    <li><strong>Email Labels</strong>: To understand email categorization.</li>
+    <li><strong>Message IDs</strong>: To perform delete/archive actions when you request them.</li>
+  </ul>
+
+  <h3>What We Do NOT Collect</h3>
+  <ul>
+    <li>We do <strong>NOT</strong> read or store the body content of your emails.</li>
+    <li>We do <strong>NOT</strong> access your email attachments.</li>
+    <li>We do <strong>NOT</strong> store any email data on our servers.</li>
   </ul>
 
   <h2>OAuth Permissions</h2>
