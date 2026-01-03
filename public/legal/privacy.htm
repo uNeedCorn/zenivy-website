@@ -4,115 +4,300 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Zenivy</title>
-  <meta name="description" content="Zenivy Privacy Policy and Data Handling Practices.">
+  <meta name="description" content="Zenivy Privacy Policy - How we collect, use, and protect your data across all Zenivy services.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #1c1917;
       background: #fff;
       padding: 2rem 1rem;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
     }
-    h1 { font-size: 2rem; margin-bottom: 1.5rem; }
-    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; }
-    h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin: 2.5rem 0 1rem; padding-top: 1rem; border-top: 1px solid #e7e5e4; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; color: #44403c; }
+    h4 { font-size: 1rem; margin: 1.25rem 0 0.5rem; color: #57534e; }
     p { margin-bottom: 1rem; }
-    ul { margin: 0 0 1rem 1.5rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
     li { margin-bottom: 0.5rem; }
     a { color: #14b8a6; }
+    code { background: #f5f5f4; padding: 0.125rem 0.375rem; border-radius: 4px; font-size: 0.9em; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e7e5e4; }
+    th { background: #fafaf9; font-weight: 600; }
+    .subtitle { color: #78716c; margin-bottom: 2rem; }
     .meta { font-size: 0.875rem; color: #78716c; margin-top: 2rem; }
+    .toc { background: #fafaf9; padding: 1.25rem 1.5rem; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .toc h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+    .toc ul { margin: 0; list-style: none; }
+    .toc li { margin: 0.375rem 0; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .highlight-box { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .product-section { background: #fafaf9; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; }
+    .product-section h2 { margin-top: 0; padding-top: 0; border-top: none; }
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 1rem; }
+      table { font-size: 0.875rem; }
+      th, td { padding: 0.5rem; }
+    }
   </style>
 </head>
 <body>
   <h1>Privacy Policy</h1>
+  <p class="subtitle">How Zenivy collects, uses, and protects your data</p>
 
-  <p>Zenivy (developed by Nextora) is committed to protecting your privacy. This policy explains how we collect, use, and protect your data.</p>
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#overview">1. Overview</a></li>
+      <li><a href="#account">2. Account &amp; Login (Zenivy Platform)</a></li>
+      <li><a href="#inboxless">3. Inboxless Service</a></li>
+      <li><a href="#google-api">4. Google API Services Disclosure</a></li>
+      <li><a href="#security">5. Data Security</a></li>
+      <li><a href="#rights">6. Your Rights</a></li>
+      <li><a href="#contact">7. Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <h2>Service Description</h2>
-  <p>Inboxless is an email analysis and inbox cleanup tool that helps you organize and manage your Gmail messages.</p>
+  <!-- Section 1: Overview -->
+  <h2 id="overview">1. Overview</h2>
+  <p>Zenivy (developed by Nextora) is committed to protecting your privacy. This policy explains how we collect, use, and protect your data across all Zenivy services.</p>
 
-  <h2>Data We Collect</h2>
-  <p>When you use our service, we collect the following data through Google APIs:</p>
+  <p>Zenivy provides multiple productivity tools, each with specific data access needs:</p>
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+      <th>Data Accessed</th>
+    </tr>
+    <tr>
+      <td><strong>Zenivy Platform</strong></td>
+      <td>Account &amp; Login</td>
+      <td>Email, Name, Profile Picture</td>
+    </tr>
+    <tr>
+      <td><strong>Inboxless</strong></td>
+      <td>Email Analysis &amp; Cleanup</td>
+      <td>Gmail messages (via <code>gmail.modify</code>)</td>
+    </tr>
+  </table>
 
-  <h3>From Google OAuth</h3>
+  <!-- Section 2: Account & Login -->
+  <h2 id="account">2. Account &amp; Login (Zenivy Platform)</h2>
+  <p>When you sign in with Google, we collect basic profile information to create and manage your account:</p>
+
+  <h3>Data We Collect</h3>
   <ul>
-    <li><strong>Email Address</strong>: To identify your account.</li>
-    <li><strong>Display Name</strong>: To personalize your experience.</li>
-    <li><strong>Profile Picture</strong>: To display in the application interface.</li>
+    <li><strong>Email Address</strong>: To identify your account</li>
+    <li><strong>Display Name</strong>: To personalize your experience</li>
+    <li><strong>Profile Picture</strong>: To display in the application interface</li>
   </ul>
 
-  <h3>From Gmail API</h3>
+  <h3>OAuth Scopes for Login</h3>
+  <p>We request only the minimum permissions needed for authentication:</p>
   <ul>
-    <li><strong>Email Headers</strong>: Sender address, subject line, and timestamp.</li>
-    <li><strong>Email Labels</strong>: To understand email categorization.</li>
-    <li><strong>Message IDs</strong>: To perform delete/archive actions when you request them.</li>
+    <li><code>openid</code> - Verify your identity</li>
+    <li><code>email</code> - Access your email address</li>
+    <li><code>profile</code> - Access your name and profile picture</li>
   </ul>
 
-  <h3>What We Do NOT Collect</h3>
-  <ul>
-    <li>We do <strong>NOT</strong> read or store the body content of your emails.</li>
-    <li>We do <strong>NOT</strong> access your email attachments.</li>
-    <li>We do <strong>NOT</strong> store any email data on our servers.</li>
-  </ul>
+  <div class="highlight-box">
+    <strong>Note:</strong> Login authentication is separate from product-specific permissions. Signing in to Zenivy does not grant access to your Gmail messages or other sensitive data.
+  </div>
 
-  <h2>OAuth Permissions</h2>
-  <p>Our application requests the following Google OAuth permissions:</p>
-  <ul>
-    <li><strong>gmail.readonly</strong>: To read your emails for inbox analysis.</li>
-    <li><strong>gmail.modify</strong>: To delete or archive emails (only when you initiate the action).</li>
-  </ul>
+  <!-- Section 3: Inboxless -->
+  <div class="product-section" id="inboxless">
+    <h2>3. Inboxless Service</h2>
+    <p><strong>Inboxless</strong> is a desktop email analysis and inbox cleanup tool that helps you understand your inbox and remove unwanted emails. This section explains how Inboxless accesses and processes your Gmail data.</p>
 
-  <h2>How We Use Google User Data</h2>
-  <p>We access Google user data solely to provide the core functionality of our email analysis service. Here is exactly how we use the data:</p>
+    <h3>3.1 Data We Access</h3>
+    <p>When you connect your Gmail account to Inboxless, we request the <code>gmail.modify</code> permission, which allows us to:</p>
 
-  <h3>Data Processing</h3>
-  <ul>
-    <li><strong>Email Metadata Analysis</strong>: We read email headers (sender, subject, date) to categorize your inbox into newsletters, notifications, and personal emails.</li>
-    <li><strong>Sender Statistics</strong>: We aggregate sender information to show you who sends you the most emails.</li>
-    <li><strong>Cleanup Actions</strong>: When you choose to delete or archive emails, we execute those actions on your behalf through the Gmail API.</li>
-  </ul>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>Email headers (sender, subject, date)</td>
+        <td>Analyze sender statistics and categorize emails</td>
+      </tr>
+      <tr>
+        <td>Email content preview</td>
+        <td>Identify newsletters, notifications, and email types</td>
+      </tr>
+      <tr>
+        <td>Email labels and status</td>
+        <td>Understand read/unread status and categorization</td>
+      </tr>
+      <tr>
+        <td><code>List-Unsubscribe</code> headers</td>
+        <td>Provide one-click unsubscribe functionality</td>
+      </tr>
+    </table>
 
-  <h3>Data Handling Practices</h3>
-  <ul>
-    <li><strong>Client-Side Processing</strong>: All email analysis is performed locally in your browser or desktop application. We do not transfer your email content to our servers.</li>
-    <li><strong>No Persistent Storage</strong>: Email data is held in memory only during your active session and is cleared when you close the application.</li>
-    <li><strong>No Secondary Use</strong>: We do not use your Google user data for advertising, marketing, or any purpose unrelated to the core email analysis functionality.</li>
-    <li><strong>No Data Sharing</strong>: We do not sell, rent, or share your Google user data with any third parties.</li>
-    <li><strong>No AI/ML Training</strong>: Your Google user data is not used to train artificial intelligence or machine learning models.</li>
-  </ul>
+    <h4>What We Do NOT Access</h4>
+    <ul>
+      <li>Email attachments or their contents</li>
+      <li>Your Google Contacts</li>
+      <li>Your Google Drive files</li>
+      <li>Any data from other Google services</li>
+    </ul>
 
-  <h2>Google API Services Limited Use Disclosure</h2>
+    <h3>3.2 Why We Need <code>gmail.modify</code> Permission</h3>
+    <p>The <code>gmail.modify</code> scope enables Inboxless to:</p>
+    <ol>
+      <li><strong>Read emails</strong>: Analyze your inbox and generate sender statistics</li>
+      <li><strong>Delete emails</strong>: Remove emails you select for cleanup (batch delete)</li>
+      <li><strong>Modify labels</strong>: Move emails to trash or archive when requested</li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>Important:</strong> Inboxless only performs delete or modify actions when you explicitly initiate them. We never automatically delete or modify your emails.
+    </div>
+
+    <h3>3.3 How We Process Your Data</h3>
+    <p><strong>Inboxless is designed with privacy-first principles:</strong></p>
+
+    <table>
+      <tr>
+        <th>Principle</th>
+        <th>Implementation</th>
+      </tr>
+      <tr>
+        <td>Local Processing</td>
+        <td>All email analysis is performed on your device, not on our servers</td>
+      </tr>
+      <tr>
+        <td>No Upload</td>
+        <td>Your email content is never transmitted to or stored on our servers</td>
+      </tr>
+      <tr>
+        <td>Immediate Disposal</td>
+        <td>Analysis data is cleared from memory when you close the application</td>
+      </tr>
+      <tr>
+        <td>No Database</td>
+        <td>We do not store your emails or analysis results</td>
+      </tr>
+    </table>
+
+    <h4>Technical Details</h4>
+    <ul>
+      <li>Email data is fetched directly from Gmail API to your device</li>
+      <li>All processing occurs in your computer's memory</li>
+      <li>OAuth tokens are securely stored in your operating system's keychain (macOS Keychain)</li>
+      <li>Our OAuth server only handles the authorization flow and never accesses your email content</li>
+    </ul>
+
+    <h3>3.4 Data Retention</h3>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Retention Period</th>
+      </tr>
+      <tr>
+        <td>Email analysis results</td>
+        <td>Deleted immediately when you close the app</td>
+      </tr>
+      <tr>
+        <td>OAuth access tokens</td>
+        <td>Stored in OS Keychain until you disconnect</td>
+      </tr>
+      <tr>
+        <td>User preferences</td>
+        <td>Stored locally until you uninstall the app</td>
+      </tr>
+    </table>
+
+    <p><strong>We do NOT retain:</strong></p>
+    <ul>
+      <li>Your email content</li>
+      <li>Your email analysis history</li>
+      <li>Records of which emails you deleted</li>
+    </ul>
+
+    <h3>3.5 Data Sharing</h3>
+    <p><strong>We do NOT share your Gmail data with any third parties.</strong></p>
+    <p>Inboxless does not include:</p>
+    <ul>
+      <li>Advertising or tracking software</li>
+      <li>Analytics services that collect email data</li>
+      <li>Any mechanism to sell or share your data</li>
+    </ul>
+
+    <h3>3.6 How to Revoke Access</h3>
+    <p>You can revoke Inboxless's access to your Gmail at any time:</p>
+
+    <h4>Method 1: In Inboxless</h4>
+    <ol>
+      <li>Open Inboxless</li>
+      <li>Go to Settings</li>
+      <li>Click "Disconnect Gmail"</li>
+    </ol>
+
+    <h4>Method 2: In Google Account</h4>
+    <ol>
+      <li>Go to <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Security Settings</a></li>
+      <li>Find "Inboxless" in the list</li>
+      <li>Click "Remove Access"</li>
+    </ol>
+
+    <p>After revoking access, Inboxless will no longer be able to access your Gmail, and locally stored tokens will be deleted.</p>
+  </div>
+
+  <!-- Section 4: Google API Disclosure -->
+  <h2 id="google-api">4. Google API Services Disclosure</h2>
   <p>Zenivy's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
-  <h2>Third-Party Services</h2>
-  <p>We use the following third-party services:</p>
+  <h3>Limited Use Compliance</h3>
+  <p>We confirm that:</p>
   <ul>
-    <li><strong>Google OAuth</strong>: For secure authentication.</li>
-    <li><strong>Supabase</strong>: For user identity management.</li>
+    <li>We only use Google user data for the purposes described in this policy</li>
+    <li>We do not use Google user data for advertising purposes</li>
+    <li>We do not sell Google user data to third parties</li>
+    <li>We do not use Google user data to train AI/ML models</li>
+    <li>We do not allow humans to read your data unless required for security purposes, with your consent, or to comply with legal requirements</li>
   </ul>
 
-  <h2>Data Retention</h2>
-  <p>We follow a minimal data retention policy. Email data used for analysis is stored only on your device and is cleared when you close the application. Account-related data will be removed when you delete your account.</p>
+  <!-- Section 5: Security -->
+  <h2 id="security">5. Data Security</h2>
+  <p>We implement industry-standard security measures to protect your data:</p>
+  <ul>
+    <li><strong>Encrypted Transmission</strong>: All data is transmitted over HTTPS</li>
+    <li><strong>Secure Token Storage</strong>: OAuth tokens are stored in your OS keychain, not in plain text</li>
+    <li><strong>No Server Storage</strong>: Email data never leaves your device</li>
+    <li><strong>Minimal Data Collection</strong>: We only collect what's necessary for the service to function</li>
+  </ul>
 
-  <h2>Data Security</h2>
-  <p>We employ industry-standard security measures to protect your data, including encrypted transmission (HTTPS) and secure authentication mechanisms.</p>
-
-  <h2>Your Rights</h2>
+  <!-- Section 6: Your Rights -->
+  <h2 id="rights">6. Your Rights</h2>
   <p>You have the right to:</p>
   <ul>
-    <li>Revoke the application's access to your Google account at any time.</li>
-    <li>Request deletion of your account and related data.</li>
-    <li>Inquire about how we handle your data.</li>
+    <li><strong>Access</strong>: Request information about what data we have about you</li>
+    <li><strong>Revoke</strong>: Disconnect your Google account at any time</li>
+    <li><strong>Delete</strong>: Request deletion of your Zenivy account and all associated data</li>
+    <li><strong>Inquire</strong>: Ask questions about how we handle your data</li>
   </ul>
 
-  <h2>Policy Updates</h2>
-  <p>We may update this policy. Significant changes will be announced on our website or via email (if you have provided contact information).</p>
+  <h3>Children's Privacy</h3>
+  <p>Zenivy services are not intended for users under 13 years of age. We do not knowingly collect personal information from children.</p>
 
-  <h2>Contact Us</h2>
-  <p>For any privacy-related questions, please email us at <a href="mailto:hello@zenivy.app">hello@zenivy.app</a>.</p>
+  <h3>Policy Updates</h3>
+  <p>We may update this policy periodically. Significant changes will be announced on our website. We encourage you to review this policy regularly.</p>
+
+  <!-- Section 7: Contact -->
+  <h2 id="contact">7. Contact Us</h2>
+  <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+  <ul>
+    <li><strong>Email</strong>: <a href="mailto:hello@zenivy.app">hello@zenivy.app</a></li>
+    <li><strong>Website</strong>: <a href="https://zenivy.app">https://zenivy.app</a></li>
+  </ul>
 
   <p class="meta">Last updated: 2026-01-03</p>
   <p class="meta"><a href="/">← Back to Home</a></p>

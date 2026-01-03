@@ -4,91 +4,285 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service | Zenivy</title>
-  <meta name="description" content="Zenivy Terms of Service and Usage Guidelines.">
+  <meta name="description" content="Zenivy Terms of Service - Usage guidelines and agreements for all Zenivy services.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #1c1917;
       background: #fff;
       padding: 2rem 1rem;
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
     }
-    h1 { font-size: 2rem; margin-bottom: 1.5rem; }
-    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; margin: 2.5rem 0 1rem; padding-top: 1rem; border-top: 1px solid #e7e5e4; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; color: #44403c; }
+    h4 { font-size: 1rem; margin: 1.25rem 0 0.5rem; color: #57534e; }
     p { margin-bottom: 1rem; }
-    ul { margin: 0 0 1rem 1.5rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
     li { margin-bottom: 0.5rem; }
     a { color: #14b8a6; }
+    code { background: #f5f5f4; padding: 0.125rem 0.375rem; border-radius: 4px; font-size: 0.9em; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e7e5e4; }
+    th { background: #fafaf9; font-weight: 600; }
+    .subtitle { color: #78716c; margin-bottom: 2rem; }
     .meta { font-size: 0.875rem; color: #78716c; margin-top: 2rem; }
+    .toc { background: #fafaf9; padding: 1.25rem 1.5rem; border-radius: 12px; margin: 1.5rem 0 2rem; }
+    .toc h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+    .toc ul { margin: 0; list-style: none; }
+    .toc li { margin: 0.375rem 0; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .highlight-box { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .danger-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    .product-section { background: #fafaf9; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; }
+    .product-section h2 { margin-top: 0; padding-top: 0; border-top: none; }
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 1rem; }
+      table { font-size: 0.875rem; }
+      th, td { padding: 0.5rem; }
+    }
   </style>
 </head>
 <body>
   <h1>Terms of Service</h1>
+  <p class="subtitle">Usage guidelines and agreements for Zenivy services</p>
 
-  <p>Welcome to Zenivy (developed by Nextora). By using our service, you agree to the following terms.</p>
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+      <li><a href="#services">2. Service Description</a></li>
+      <li><a href="#account">3. Account &amp; Authorization</a></li>
+      <li><a href="#inboxless">4. Inboxless Service Terms</a></li>
+      <li><a href="#responsibilities">5. Your Responsibilities</a></li>
+      <li><a href="#disclaimer">6. Disclaimers &amp; Limitations</a></li>
+      <li><a href="#ip">7. Intellectual Property</a></li>
+      <li><a href="#termination">8. Termination</a></li>
+      <li><a href="#governing">9. Governing Law</a></li>
+      <li><a href="#contact">10. Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <h2>Service Description</h2>
-  <p>Inboxless is an email analysis and inbox cleanup tool that helps you:</p>
+  <!-- Section 1: Acceptance -->
+  <h2 id="acceptance">1. Acceptance of Terms</h2>
+  <p>Welcome to Zenivy (developed by Nextora). By accessing or using our services, you agree to be bound by these Terms of Service and our <a href="/legal/privacy.htm">Privacy Policy</a>.</p>
+  <p>If you do not agree to these terms, please do not use our services.</p>
+
+  <!-- Section 2: Services -->
+  <h2 id="services">2. Service Description</h2>
+  <p>Zenivy provides productivity tools designed to help you manage your digital life more effectively:</p>
+
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><strong>Zenivy Platform</strong></td>
+      <td>Account management and authentication across all Zenivy products</td>
+    </tr>
+    <tr>
+      <td><strong>Inboxless</strong></td>
+      <td>Email analysis and inbox cleanup tool for Gmail</td>
+    </tr>
+  </table>
+
+  <p>We may add, modify, or discontinue services at our discretion with reasonable notice.</p>
+
+  <!-- Section 3: Account -->
+  <h2 id="account">3. Account &amp; Authorization</h2>
+
+  <h3>3.1 Account Requirements</h3>
+  <p>To use Zenivy services, you must:</p>
   <ul>
-    <li>Analyze your Gmail inbox to understand email sources and distribution.</li>
-    <li>Batch clean unwanted emails to free up storage space.</li>
-    <li>Manage subscription emails to reduce inbox noise.</li>
+    <li>Be at least 13 years of age</li>
+    <li>Have a valid Google account</li>
+    <li>Provide accurate and complete information</li>
+    <li>Maintain the security of your account credentials</li>
   </ul>
 
-  <h2>Account and Authorization</h2>
-  <p>To use this service, you need:</p>
+  <h3>3.2 Google OAuth Authorization</h3>
+  <p>Certain features require you to authorize Zenivy to access your Google account data via OAuth. By granting authorization, you:</p>
   <ul>
-    <li>A valid Google account.</li>
-    <li>To authorize this application to access your Gmail (via Google OAuth).</li>
-  </ul>
-  <p>You can revoke authorization at any time in your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account Settings</a>.</p>
-
-  <h2>Your Responsibilities</h2>
-  <ul>
-    <li>You agree to use this service lawfully and comply with applicable laws in your jurisdiction.</li>
-    <li>You understand and consent to authorizing this application to access your Gmail account.</li>
-    <li>You are responsible for maintaining the security of your account.</li>
+    <li>Consent to Zenivy accessing the specific data described in the authorization prompt</li>
+    <li>Understand that you can revoke access at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Settings</a></li>
+    <li>Acknowledge that revoking access may limit or disable certain features</li>
   </ul>
 
-  <h2>Important Warning: Irreversible Actions</h2>
-  <p><strong>Deleting emails is an irreversible action.</strong> Once emails are deleted, they cannot be recovered. Please review carefully before performing delete operations. We recommend:</p>
+  <div class="highlight-box">
+    <strong>Separate Authorizations:</strong> Signing in to Zenivy (login) is separate from authorizing product-specific features (like Gmail access for Inboxless). You control each authorization independently.
+  </div>
+
+  <!-- Section 4: Inboxless -->
+  <div class="product-section" id="inboxless">
+    <h2>4. Inboxless Service Terms</h2>
+    <p>The following terms apply specifically to the Inboxless email analysis and cleanup service.</p>
+
+    <h3>4.1 Service Features</h3>
+    <p>Inboxless helps you:</p>
+    <ul>
+      <li><strong>Analyze</strong> your Gmail inbox to understand email sources and patterns</li>
+      <li><strong>Identify</strong> newsletters, notifications, and bulk senders</li>
+      <li><strong>Clean up</strong> unwanted emails through batch deletion</li>
+      <li><strong>Unsubscribe</strong> from mailing lists with one click</li>
+    </ul>
+
+    <h3>4.2 Gmail Access Permission</h3>
+    <p>Inboxless requires the <code>gmail.modify</code> permission to function. This permission allows Inboxless to:</p>
+    <ul>
+      <li>Read your email messages and metadata</li>
+      <li>Delete emails when you explicitly request it</li>
+      <li>Modify email labels (trash, archive)</li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>Your Control:</strong> Inboxless will never automatically delete or modify your emails. All destructive actions require your explicit confirmation.
+    </div>
+
+    <h3>4.3 Irreversible Actions Warning</h3>
+    <div class="danger-box">
+      <strong>WARNING: Deleting emails is permanent and irreversible.</strong>
+      <p style="margin: 0.5rem 0 0;">Once emails are deleted, they cannot be recovered. Before performing delete operations:</p>
+      <ul style="margin: 0.5rem 0 0;">
+        <li>Review the selected emails carefully</li>
+        <li>Consider using "Archive" instead of "Delete" first</li>
+        <li>Back up important emails before cleanup</li>
+        <li>Start with a small batch to test</li>
+      </ul>
+    </div>
+
+    <h3>4.4 Service Limitations</h3>
+    <p>Please be aware of the following limitations:</p>
+    <ul>
+      <li><strong>Gmail Only:</strong> Inboxless currently supports Gmail accounts only</li>
+      <li><strong>API Limits:</strong> Gmail API rate limits may affect processing speed for large mailboxes</li>
+      <li><strong>Analysis Accuracy:</strong> Email categorization is based on heuristics and may not be 100% accurate</li>
+      <li><strong>Desktop App:</strong> Inboxless is a desktop application (macOS); web version is for development testing only</li>
+    </ul>
+
+    <h3>4.5 Data Handling</h3>
+    <p>Inboxless processes your email data locally on your device. Your emails are:</p>
+    <ul>
+      <li><strong>Never uploaded</strong> to our servers</li>
+      <li><strong>Never stored</strong> in any database</li>
+      <li><strong>Immediately discarded</strong> when you close the application</li>
+    </ul>
+    <p>For complete details, see the <a href="/legal/privacy.htm#inboxless">Inboxless Privacy Policy section</a>.</p>
+  </div>
+
+  <!-- Section 5: Responsibilities -->
+  <h2 id="responsibilities">5. Your Responsibilities</h2>
+  <p>By using Zenivy services, you agree to:</p>
   <ul>
-    <li>Testing with the "Archive" function first.</li>
-    <li>Backing up important emails beforehand.</li>
-    <li>Confirming your selection before executing deletion.</li>
+    <li><strong>Lawful Use:</strong> Use our services only for lawful purposes and in compliance with applicable laws</li>
+    <li><strong>Account Security:</strong> Maintain the confidentiality of your account and notify us of any unauthorized use</li>
+    <li><strong>Accurate Information:</strong> Provide accurate information and keep it updated</li>
+    <li><strong>Respectful Use:</strong> Not attempt to circumvent security measures or interfere with service operation</li>
+    <li><strong>No Abuse:</strong> Not use our services to send spam, malware, or engage in any harmful activities</li>
   </ul>
 
-  <h2>Disclaimer</h2>
-  <p>This service is provided "as is." While we strive to ensure stable operation, we do not guarantee:</p>
+  <h3>Prohibited Activities</h3>
+  <p>You may not:</p>
   <ul>
-    <li>Uninterrupted or completely error-free service.</li>
-    <li>100% accuracy of analysis results.</li>
-  </ul>
-  <p>We are not liable for any direct or indirect damages arising from the use or inability to use this service, including but not limited to data loss or business interruption.</p>
-
-  <h2>Service Limitations and Termination</h2>
-  <ul>
-    <li>We reserve the right to modify, suspend, or terminate the service at any time.</li>
-    <li>If you violate these terms, we may restrict or terminate your access.</li>
-    <li>You may stop using the service and revoke authorization at any time.</li>
+    <li>Reverse engineer, decompile, or disassemble our software</li>
+    <li>Use automated systems (bots, scrapers) to access our services</li>
+    <li>Resell or redistribute our services without authorization</li>
+    <li>Violate any third-party rights or applicable laws</li>
   </ul>
 
-  <h2>Intellectual Property</h2>
-  <p>All content, design, and code of this service are owned by or licensed to Nextora and are protected by copyright law.</p>
+  <!-- Section 6: Disclaimers -->
+  <h2 id="disclaimer">6. Disclaimers &amp; Limitations</h2>
 
-  <h2>Terms Updates</h2>
-  <p>We may update these terms. Significant changes will be announced on our website or via email. Continued use of the service constitutes acceptance of the updated terms.</p>
+  <h3>6.1 Service Provided "As Is"</h3>
+  <p>Zenivy services are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to:</p>
+  <ul>
+    <li>Merchantability or fitness for a particular purpose</li>
+    <li>Uninterrupted or error-free operation</li>
+    <li>Accuracy, reliability, or completeness of results</li>
+    <li>Security or freedom from viruses or harmful components</li>
+  </ul>
 
-  <h2>Governing Law</h2>
-  <p>These terms are governed by the laws of Taiwan (R.O.C.). Any disputes shall be subject to the jurisdiction of the Taipei District Court as the court of first instance.</p>
+  <h3>6.2 Limitation of Liability</h3>
+  <p>To the maximum extent permitted by law, Zenivy and Nextora shall not be liable for:</p>
+  <ul>
+    <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+    <li>Loss of data, profits, goodwill, or other intangible losses</li>
+    <li>Damages resulting from unauthorized access to your account</li>
+    <li>Damages arising from your use or inability to use our services</li>
+  </ul>
 
-  <h2>Contact Us</h2>
-  <p>For any questions, please email us at <a href="mailto:hello@zenivy.app">hello@zenivy.app</a>.</p>
+  <h3>6.3 Third-Party Services</h3>
+  <p>Our services integrate with third-party platforms (e.g., Google Gmail). We are not responsible for:</p>
+  <ul>
+    <li>Changes to third-party APIs or services</li>
+    <li>Third-party service outages or limitations</li>
+    <li>Third-party terms of service or privacy practices</li>
+  </ul>
 
-  <p class="meta">Last updated: 2026-01-02</p>
+  <!-- Section 7: IP -->
+  <h2 id="ip">7. Intellectual Property</h2>
+  <p>All content, design, code, trademarks, and other intellectual property related to Zenivy services are owned by or licensed to Nextora.</p>
+  <ul>
+    <li>You may not copy, modify, or distribute our content without permission</li>
+    <li>You retain ownership of your own data (e.g., your emails)</li>
+    <li>By using our services, you do not acquire any ownership rights to our intellectual property</li>
+  </ul>
+
+  <!-- Section 8: Termination -->
+  <h2 id="termination">8. Termination</h2>
+
+  <h3>8.1 By You</h3>
+  <p>You may stop using our services at any time by:</p>
+  <ul>
+    <li>Uninstalling the application</li>
+    <li>Revoking OAuth authorization in your Google Account settings</li>
+    <li>Contacting us to delete your account</li>
+  </ul>
+
+  <h3>8.2 By Us</h3>
+  <p>We may suspend or terminate your access if:</p>
+  <ul>
+    <li>You violate these Terms of Service</li>
+    <li>Your use poses a security risk</li>
+    <li>We are required to do so by law</li>
+    <li>We discontinue the service (with reasonable notice)</li>
+  </ul>
+
+  <h3>8.3 Effect of Termination</h3>
+  <p>Upon termination:</p>
+  <ul>
+    <li>Your right to use our services will cease immediately</li>
+    <li>We will delete any data associated with your account (per our Privacy Policy)</li>
+    <li>Provisions that by their nature should survive will remain in effect</li>
+  </ul>
+
+  <!-- Section 9: Governing Law -->
+  <h2 id="governing">9. Governing Law</h2>
+  <p>These Terms of Service are governed by and construed in accordance with the laws of Taiwan (Republic of China), without regard to conflict of law principles.</p>
+  <p>Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the Taipei District Court as the court of first instance.</p>
+
+  <h3>Changes to Terms</h3>
+  <p>We may update these terms from time to time. When we make significant changes:</p>
+  <ul>
+    <li>We will update the "Last updated" date at the bottom of this page</li>
+    <li>We may notify you via email or in-app notification</li>
+    <li>Continued use after changes constitutes acceptance of the new terms</li>
+  </ul>
+
+  <!-- Section 10: Contact -->
+  <h2 id="contact">10. Contact Us</h2>
+  <p>If you have questions about these Terms of Service, please contact us:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:hello@zenivy.app">hello@zenivy.app</a></li>
+    <li><strong>Website:</strong> <a href="https://zenivy.app">https://zenivy.app</a></li>
+  </ul>
+
+  <p class="meta">Last updated: 2026-01-03</p>
   <p class="meta"><a href="/">← Back to Home</a></p>
 </body>
 </html>
