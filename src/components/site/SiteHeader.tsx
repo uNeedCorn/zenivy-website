@@ -24,6 +24,15 @@ export function SiteHeader() {
 
         <nav className="flex items-center gap-1 text-sm text-stone-600">
           <Link
+            href="/inboxless"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-[10px] hover:bg-teal-50 hover:text-teal-700 transition-colors focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]"
+          >
+            Inboxless
+            <span className="rounded bg-teal-100 px-1.5 py-0.5 text-[10px] font-medium text-teal-700">
+              Beta
+            </span>
+          </Link>
+          <Link
             href="/manifesto"
             className="px-3 py-2 rounded-[10px] hover:bg-stone-100 hover:text-stone-900 transition-colors focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]"
           >
