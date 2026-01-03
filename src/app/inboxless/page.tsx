@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Container } from "@/components/site/Container";
 import { FadeIn } from "@/components/site/FadeIn";
+import { InboxlessHeroVisual } from "@/components/site/InboxlessHeroVisual";
 import {
   InboxStackIcon,
   ChartBarIcon,
@@ -174,12 +175,16 @@ export default function InboxlessPage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-stone-50">
-        {/* 背景光暈 */}
+      <section className="relative min-h-[70vh] overflow-hidden bg-stone-50">
+        {/* 動態視覺背景 */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 overflow-hidden"
         >
+          <div className="absolute inset-0 opacity-50 [mask-image:radial-gradient(70%_70%_at_50%_45%,black,transparent)]">
+            <InboxlessHeroVisual />
+          </div>
+          {/* 背景光暈 */}
           <div className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E7F4F0]/60 blur-3xl" />
           <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-teal-500/10 blur-3xl" />
           <div className="absolute -right-32 bottom-0 h-[500px] w-[500px] rounded-full bg-teal-500/5 blur-3xl" />
@@ -232,13 +237,13 @@ export default function InboxlessPage() {
           <FadeIn delay={175}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
               {/* 主要 CTA - macOS */}
-              <button className="group inline-flex items-center gap-3 rounded-[10px] bg-stone-900 px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all hover:bg-stone-800 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
-                <AppleIcon className="h-5 w-5" />
+              <button className="group inline-flex items-center gap-3 rounded-[10px] bg-stone-900 px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
+                <AppleIcon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
                 <span>申請 macOS Beta</span>
               </button>
 
               {/* 次要 CTA - Windows */}
-              <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-stone-600 transition-colors hover:border-stone-300 hover:bg-stone-50 focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
+              <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-stone-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:bg-stone-50 hover:shadow-md focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
                 <WindowsIcon className="h-4 w-4" />
                 <span>Windows 等候名單</span>
               </button>
@@ -288,8 +293,8 @@ export default function InboxlessPage() {
           <div className="mx-auto mt-12 max-w-xl space-y-4 md:mt-16">
             {painPoints.map(({ icon: Icon, text }, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="group flex items-start gap-4 rounded-2xl border border-transparent p-4 transition-colors hover:border-stone-200/80 hover:bg-stone-50">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-stone-100 text-stone-500 transition-colors group-hover:bg-teal-50 group-hover:text-teal-600">
+                <div className="group flex items-start gap-4 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:border-stone-200/80 hover:bg-stone-50">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-stone-100 text-stone-500 transition-all duration-300 group-hover:bg-teal-50 group-hover:text-teal-600 group-hover:scale-105">
                     <Icon className="h-5 w-5" />
                   </div>
                   <p className="pt-2 text-base leading-relaxed text-stone-700">
@@ -302,8 +307,37 @@ export default function InboxlessPage() {
         </Container>
       </section>
 
-      {/* 功能區塊 */}
+      {/* 過渡區塊 - 觀點 */}
       <section className="bg-stone-50">
+        <Container size="narrow" className="py-16 md:py-24">
+          <div className="mx-auto max-w-xl text-center">
+            <FadeIn>
+              <h2 className="text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">
+                其實，不是每封信都需要手動處理
+              </h2>
+            </FadeIn>
+            <FadeIn delay={80}>
+              <p className="mt-6 text-xl font-semibold leading-relaxed text-stone-700 md:text-2xl">
+                問題不在於你太懶
+                <br className="sm:hidden" />
+                <span className="text-teal-600">
+                  ，而是工具太難用
+                </span>
+              </p>
+            </FadeIn>
+            <FadeIn delay={160}>
+              <p className="mt-6 text-base leading-relaxed text-stone-600 md:text-lg">
+                一封一封退訂、一頁一頁翻找，當然整理不動。
+                <br className="hidden md:block" />
+                你需要的是一個聰明的助手，幫你把雜訊批次處理掉。
+              </p>
+            </FadeIn>
+          </div>
+        </Container>
+      </section>
+
+      {/* 功能區塊 */}
+      <section className="bg-white">
         <Container size="wide" className="py-16 md:py-24">
           <FadeIn>
             <h2 className="text-center text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">
@@ -317,8 +351,8 @@ export default function InboxlessPage() {
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:mt-16 md:grid-cols-2">
             {features.map(({ icon: Icon, title, description }, index) => (
               <FadeIn key={index} delay={index * 75}>
-                <div className="group rounded-2xl border border-stone-200/80 bg-white p-6 shadow-subtle transition-all hover:shadow-medium">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-stone-100 text-stone-500 transition-all duration-300 group-hover:scale-105 group-hover:bg-teal-50 group-hover:text-teal-600">
+                <div className="group rounded-2xl border border-stone-200/80 bg-stone-50/50 p-6 shadow-subtle transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:bg-white hover:shadow-medium">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-stone-100 text-stone-500 transition-all duration-300 group-hover:scale-110 group-hover:bg-teal-50 group-hover:text-teal-600">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-stone-900 md:text-xl">
@@ -335,11 +369,11 @@ export default function InboxlessPage() {
       </section>
 
       {/* 隱私區塊 */}
-      <section className="bg-white">
+      <section className="bg-stone-50">
         <Container size="narrow" className="py-16 md:py-24">
           <FadeIn>
             <div className="flex justify-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600 transition-transform duration-300 hover:scale-105">
                 <ShieldCheckIcon className="h-8 w-8" />
               </div>
             </div>
@@ -354,8 +388,8 @@ export default function InboxlessPage() {
           <div className="mx-auto mt-10 max-w-lg md:mt-12">
             {privacyFeatures.map(({ text }, index) => (
               <FadeIn key={index} delay={index * 50}>
-                <div className="flex items-center gap-3 border-b border-stone-100 py-4 last:border-b-0">
-                  <CheckCircleIcon className="h-5 w-5 shrink-0 text-teal-500" />
+                <div className="group flex items-center gap-3 border-b border-stone-200 py-4 transition-colors last:border-b-0 hover:bg-white">
+                  <CheckCircleIcon className="h-5 w-5 shrink-0 text-teal-500 transition-transform duration-300 group-hover:scale-110" />
                   <span className="text-base text-stone-700">{text}</span>
                 </div>
               </FadeIn>
@@ -365,7 +399,7 @@ export default function InboxlessPage() {
       </section>
 
       {/* 運作方式 */}
-      <section className="bg-stone-50">
+      <section className="bg-white">
         <Container size="wide" className="py-16 md:py-24">
           <FadeIn>
             <h2 className="text-center text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">
@@ -376,12 +410,16 @@ export default function InboxlessPage() {
           <div className="mx-auto mt-12 grid max-w-3xl gap-8 md:mt-16 md:grid-cols-4 md:gap-4">
             {steps.map(({ number, title, description }, index) => (
               <FadeIn key={index} delay={index * 75}>
-                <div className="relative text-center">
-                  {/* 連接線 (桌面版) */}
+                <div className="group relative text-center">
+                  {/* 連接線 (桌面版) - 漸變效果 */}
                   {index < steps.length - 1 && (
-                    <div className="absolute left-[calc(50%+24px)] top-6 hidden h-0.5 w-[calc(100%-48px)] bg-stone-200 md:block" />
+                    <div className="absolute left-[calc(50%+28px)] top-6 hidden h-0.5 w-[calc(100%-56px)] md:block">
+                      <div className="h-full w-full bg-gradient-to-r from-teal-300 to-teal-200" />
+                      {/* 動態光點效果 */}
+                      <div className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-teal-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </div>
                   )}
-                  <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-lg font-bold text-white">
+                  <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-teal-500 text-lg font-bold text-white shadow-lg shadow-teal-500/25 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-teal-500/30">
                     {number}
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-stone-900 md:text-lg">
@@ -396,21 +434,35 @@ export default function InboxlessPage() {
       </section>
 
       {/* 截圖區塊 (Placeholder) */}
-      <section className="bg-white">
+      <section className="bg-stone-50">
         <Container size="wide" className="py-16 md:py-24">
           <FadeIn>
-            <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-stone-100 shadow-medium">
-              <div className="flex items-center gap-2 border-b border-stone-200 bg-stone-50 px-4 py-3">
-                <div className="h-3 w-3 rounded-full bg-stone-300" />
-                <div className="h-3 w-3 rounded-full bg-stone-300" />
-                <div className="h-3 w-3 rounded-full bg-stone-300" />
-                <span className="ml-4 text-sm text-stone-500">Inboxless</span>
+            <div className="group mx-auto max-w-4xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-medium transition-all duration-500 hover:shadow-xl">
+              {/* macOS 標題列 */}
+              <div className="flex items-center gap-2 border-b border-stone-200 bg-stone-100/80 px-4 py-3">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-3 w-3 rounded-full bg-[#FF5F57] transition-opacity group-hover:opacity-80" />
+                  <div className="h-3 w-3 rounded-full bg-[#FEBC2E] transition-opacity group-hover:opacity-80" />
+                  <div className="h-3 w-3 rounded-full bg-[#28C840] transition-opacity group-hover:opacity-80" />
+                </div>
+                <span className="ml-4 text-sm font-medium text-stone-600">Inboxless</span>
               </div>
-              <div className="flex aspect-[16/10] items-center justify-center p-8">
-                <div className="text-center">
-                  <ComputerDesktopIcon className="mx-auto h-16 w-16 text-stone-300" />
-                  <p className="mt-4 text-sm text-stone-400">
+              {/* 內容區 */}
+              <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-stone-50 to-stone-100 p-8">
+                {/* 裝飾背景 */}
+                <div className="absolute inset-0 opacity-30">
+                  <div className="absolute left-1/4 top-1/4 h-32 w-32 rounded-full bg-teal-200 blur-3xl" />
+                  <div className="absolute bottom-1/4 right-1/4 h-40 w-40 rounded-full bg-teal-100 blur-3xl" />
+                </div>
+                <div className="relative text-center">
+                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    <ComputerDesktopIcon className="h-10 w-10 text-stone-300" />
+                  </div>
+                  <p className="mt-6 text-sm font-medium text-stone-500">
                     產品截圖即將加入
+                  </p>
+                  <p className="mt-1 text-xs text-stone-400">
+                    敬請期待
                   </p>
                 </div>
               </div>
@@ -420,39 +472,45 @@ export default function InboxlessPage() {
       </section>
 
       {/* 下載區塊 */}
-      <section className="bg-stone-50">
+      <section className="bg-white">
         <Container size="narrow" className="py-16 md:py-24">
           <FadeIn>
-            <div className="rounded-3xl bg-gradient-to-br from-stone-900 to-stone-800 p-8 text-center md:p-12">
-              <h2 className="text-2xl font-bold text-white md:text-3xl">
-                立即申請封測資格
-              </h2>
-              <p className="mt-3 text-stone-400">
-                限額 100 名，搶先體驗完整功能
-              </p>
+            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 p-8 text-center md:p-12">
+              {/* 裝飾光暈 */}
+              <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-teal-500/20 blur-3xl transition-all duration-500 group-hover:bg-teal-500/30" />
+              <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-teal-500/10 blur-3xl transition-all duration-500 group-hover:bg-teal-500/20" />
 
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-                <button className="group inline-flex items-center gap-3 rounded-[10px] bg-white px-6 py-3.5 text-base font-medium text-stone-900 shadow-lg transition-all hover:bg-stone-50 focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
-                  <AppleIcon className="h-5 w-5" />
-                  <span>申請 macOS Beta</span>
-                </button>
+              <div className="relative">
+                <h2 className="text-2xl font-bold text-white md:text-3xl">
+                  立即申請封測資格
+                </h2>
+                <p className="mt-3 text-stone-400">
+                  限額 100 名，搶先體驗完整功能
+                </p>
 
-                <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-700 px-5 py-3 text-sm font-medium text-stone-400 transition-colors hover:border-stone-600 hover:text-stone-300 focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
-                  <WindowsIcon className="h-4 w-4" />
-                  <span>Windows 等候名單</span>
-                </button>
+                <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+                  <button className="group/btn inline-flex items-center gap-3 rounded-[10px] bg-white px-6 py-3.5 text-base font-medium text-stone-900 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-50 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
+                    <AppleIcon className="h-5 w-5 transition-transform duration-300 group-hover/btn:scale-110" />
+                    <span>申請 macOS Beta</span>
+                  </button>
+
+                  <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-700 px-5 py-3 text-sm font-medium text-stone-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:text-stone-300 focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
+                    <WindowsIcon className="h-4 w-4" />
+                    <span>Windows 等候名單</span>
+                  </button>
+                </div>
+
+                <p className="mt-6 text-sm text-teal-400">
+                  封測期間免費使用完整功能
+                </p>
               </div>
-
-              <p className="mt-6 text-sm text-teal-400">
-                封測期間免費使用完整功能
-              </p>
             </div>
           </FadeIn>
         </Container>
       </section>
 
       {/* FAQ 區塊 */}
-      <section className="bg-white">
+      <section className="bg-stone-50">
         <Container size="narrow" className="py-16 md:py-24">
           <FadeIn>
             <h2 className="text-center text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">
@@ -471,7 +529,7 @@ export default function InboxlessPage() {
       </section>
 
       {/* 回到 Zenivy */}
-      <section className="bg-stone-50">
+      <section className="bg-white">
         <Container size="narrow" className="py-12 md:py-16">
           <FadeIn>
             <div className="text-center">
