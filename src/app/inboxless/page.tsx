@@ -375,16 +375,21 @@ export default function InboxlessPage() {
           <FadeIn delay={175}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
               {/* 主要 CTA - macOS */}
-              <button className="group inline-flex items-center gap-3 rounded-[10px] bg-stone-900 px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
+              <a
+                href="https://zenivy.notion.site/2ddc785812b480209b13cb4ac5700187"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-[10px] bg-stone-900 px-6 py-3.5 text-base font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-800 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]"
+              >
                 <AppleIcon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
                 <span>申請 macOS Beta</span>
-              </button>
+              </a>
 
               {/* 次要 CTA - Windows */}
-              <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-stone-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-300 hover:bg-stone-50 hover:shadow-md focus:outline-none focus:ring-[3px] focus:ring-[#E7F4F0]">
+              <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-[10px] border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-stone-400 opacity-60">
                 <WindowsIcon className="h-4 w-4" />
-                <span>Windows 等候名單</span>
-              </button>
+                <span>Windows 開發中</span>
+              </span>
             </div>
 
             <p className="mt-4 text-sm text-stone-500">
@@ -592,15 +597,20 @@ export default function InboxlessPage() {
                 </p>
 
                 <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-                  <button className="group/btn inline-flex items-center gap-3 rounded-[10px] bg-white px-6 py-3.5 text-base font-medium text-stone-900 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-50 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
+                  <a
+                    href="https://zenivy.notion.site/2ddc785812b480209b13cb4ac5700187"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn inline-flex items-center gap-3 rounded-[10px] bg-white px-6 py-3.5 text-base font-medium text-stone-900 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-stone-50 hover:shadow-xl focus:outline-none focus:ring-[3px] focus:ring-teal-500/30"
+                  >
                     <AppleIcon className="h-5 w-5 transition-transform duration-300 group-hover/btn:scale-110" />
                     <span>申請 macOS Beta</span>
-                  </button>
+                  </a>
 
-                  <button className="inline-flex items-center gap-2 rounded-[10px] border border-stone-700 px-5 py-3 text-sm font-medium text-stone-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-stone-600 hover:text-stone-300 focus:outline-none focus:ring-[3px] focus:ring-teal-500/30">
+                  <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-[10px] border border-stone-700 px-5 py-3 text-sm font-medium text-stone-500 opacity-60">
                     <WindowsIcon className="h-4 w-4" />
-                    <span>Windows 等候名單</span>
-                  </button>
+                    <span>Windows 開發中</span>
+                  </span>
                 </div>
 
                 <p className="mt-6 text-sm text-teal-400">
